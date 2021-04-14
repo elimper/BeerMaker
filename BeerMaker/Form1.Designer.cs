@@ -395,6 +395,7 @@ namespace BeerMaker
             this.clearRecipeButton.Text = "Clear";
             this.clearRecipeButton.UseVisualStyleBackColor = true;
             this.clearRecipeButton.Visible = false;
+            this.clearRecipeButton.Click += new System.EventHandler(this.clearRecipeButton_Click);
             // 
             // clearSelectedHopButton
             // 
@@ -405,6 +406,7 @@ namespace BeerMaker
             this.clearSelectedHopButton.Text = "Clear Selected";
             this.clearSelectedHopButton.UseVisualStyleBackColor = true;
             this.clearSelectedHopButton.Visible = false;
+            this.clearSelectedHopButton.Click += new System.EventHandler(this.clearSelectedHopButton_Click);
             // 
             // clearSelectedMaltButton
             // 
@@ -415,6 +417,7 @@ namespace BeerMaker
             this.clearSelectedMaltButton.Text = "Clear Selected";
             this.clearSelectedMaltButton.UseVisualStyleBackColor = true;
             this.clearSelectedMaltButton.Visible = false;
+            this.clearSelectedMaltButton.Click += new System.EventHandler(this.clearSelectedMaltButton_Click);
             // 
             // beerCalcForm
             // 

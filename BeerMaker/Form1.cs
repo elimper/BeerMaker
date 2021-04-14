@@ -252,5 +252,23 @@ namespace BeerMaker
             beerStyleComboBox.SelectedIndex = -1;
             beerNameTextBox.Focus();
         }
+
+        private void clearRecipeButton_Click(object sender, EventArgs e)
+        {
+            hopsListView.Items.Clear();
+            fermentablesListView.Items.Clear();
+            resetFermentableAdditions();
+            resetHopAdditions();
+        }
+
+        private void clearSelectedHopButton_Click(object sender, EventArgs e)
+        {
+            hopsListView.SelectedItems.Clear();
+        }
+
+        private void clearSelectedMaltButton_Click(object sender, EventArgs e)
+        {
+            fermentablesListView.SelectedItems.Clear();
+        }
     }
 }
