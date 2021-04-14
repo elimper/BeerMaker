@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerMaker", "BeerMaker\BeerMaker.csproj", "{F615439C-241D-41DD-AF69-ED9EEC624B05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerLibrary", "BeerLibrary\BeerLibrary.csproj", "{69C7FA5B-9275-4246-B1B1-A40DC172100A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F615439C-241D-41DD-AF69-ED9EEC624B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F615439C-241D-41DD-AF69-ED9EEC624B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F615439C-241D-41DD-AF69-ED9EEC624B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F615439C-241D-41DD-AF69-ED9EEC624B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C7FA5B-9275-4246-B1B1-A40DC172100A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C7FA5B-9275-4246-B1B1-A40DC172100A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C7FA5B-9275-4246-B1B1-A40DC172100A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C7FA5B-9275-4246-B1B1-A40DC172100A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36A8AE33-9655-4B5D-8F19-E497580C4B80}
+	EndGlobalSection
+EndGlobal
