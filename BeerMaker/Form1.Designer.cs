@@ -62,6 +62,10 @@ namespace BeerMaker
             this.fermentablesListView = new System.Windows.Forms.ListView();
             this.maltCH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gravityCH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.beerInfoGroupBox.SuspendLayout();
             this.hopGroupBox.SuspendLayout();
             this.fermentablesGroupBox.SuspendLayout();
@@ -278,7 +282,7 @@ namespace BeerMaker
             this.fermentablesGroupBox.Controls.Add(this.fermentWeightTextBox);
             this.fermentablesGroupBox.Controls.Add(this.label2);
             this.fermentablesGroupBox.Controls.Add(this.label1);
-            this.fermentablesGroupBox.Location = new System.Drawing.Point(34, 373);
+            this.fermentablesGroupBox.Location = new System.Drawing.Point(34, 399);
             this.fermentablesGroupBox.Name = "fermentablesGroupBox";
             this.fermentablesGroupBox.Size = new System.Drawing.Size(406, 127);
             this.fermentablesGroupBox.TabIndex = 16;
@@ -353,7 +357,7 @@ namespace BeerMaker
             this.gravityCH});
             this.fermentablesListView.GridLines = true;
             this.fermentablesListView.HideSelection = false;
-            this.fermentablesListView.Location = new System.Drawing.Point(488, 373);
+            this.fermentablesListView.Location = new System.Drawing.Point(488, 399);
             this.fermentablesListView.Name = "fermentablesListView";
             this.fermentablesListView.Size = new System.Drawing.Size(287, 144);
             this.fermentablesListView.TabIndex = 17;
@@ -371,11 +375,51 @@ namespace BeerMaker
             this.gravityCH.Text = "Gravity";
             this.gravityCH.Width = 84;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(34, 550);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 38);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Reset All";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(185, 550);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(107, 38);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(575, 355);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(115, 38);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Clear Selected";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(575, 550);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(115, 38);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "Clear Selected";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // beerCalcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 543);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.fermentablesListView);
             this.Controls.Add(this.fermentablesGroupBox);
             this.Controls.Add(this.hopsListView);
@@ -431,6 +475,10 @@ namespace BeerMaker
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox efficiencyTextBox;
         private System.Windows.Forms.Label efficiencyLabel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
