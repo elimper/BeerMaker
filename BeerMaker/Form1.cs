@@ -90,12 +90,27 @@ namespace BeerMaker
                             "\n" + "Gravity Points: " + totalGravityPoints.ToString("0.00") +
                             "\n" + "IBU: " + totalIBU.ToString("0.00");
         }
+
+        private void resetHopAdditions()
+        {
+            hopComboBox.SelectedIndex = -1;
+            alphaAcidTextBox.Text = "";
+            hopOuncesTextBox.Text = "";
+            hopMinutesTextBox.Text = "";
+        }
+        private void resetFermentableAdditions()
+        {
+            fermentWeightTextBox.Clear();
+            fermentablesComboBox.SelectedIndex = -1;
+            fermentablesComboBox.Focus();
+        }
         private void startRecipeButton_Click(object sender, EventArgs e)
         {
             if(beerNameTextBox != null && beerNameTextBox.Text != "")
             {
                 if(batchSizeTextBox != null && batchSizeTextBox.Text != "")
                 {
+                    //Will crash if typed in
                     if (beerStyleComboBox.SelectedItem != null 
                         || !beerStyleComboBox.SelectedItem.ToString().StartsWith("#")
                         || !beerStyleComboBox.SelectedItem.ToString().Equals(string.Empty))
@@ -109,6 +124,10 @@ namespace BeerMaker
                         hopGroupBox.Visible = true;
                         hopsListView.Visible = true;
                         fermentablesListView.Visible = true;
+                        resetAllButton.Visible = true;
+                        clearRecipeButton.Visible = true;
+                        clearSelectedHopButton.Visible = true;
+                        clearSelectedMaltButton.Visible = true;
                         updateLabel();
                     }
                 }
@@ -151,10 +170,7 @@ namespace BeerMaker
                                 hopsListView.Items.Add(hop);
                                 hop.SubItems.Add(beerCalc.calculateIBU(gallons, aa, ounces, gravity, minutes).ToString("0.00"));
                                 totalIBU += beerCalc.calculateIBU(gallons, aa, ounces, gravity, minutes);
-                                hopComboBox.SelectedIndex = -1;
-                                alphaAcidTextBox.Text = "";
-                                hopOuncesTextBox.Text = "";
-                                hopMinutesTextBox.Text = "";
+                                resetHopAdditions();
                                 hopComboBox.Focus();
                                 updateLabel();
                             }
@@ -199,8 +215,7 @@ namespace BeerMaker
                         fermentablesListView.Items.Add(fermentableItem);
                         fermentableItem.SubItems.Add(gp.ToString());
                         totalGravityPoints += gp;
-                        fermentWeightTextBox.Clear();
-                        fermentablesComboBox.SelectedIndex = -1;
+                        resetFermentableAdditions();
                         fermentablesComboBox.Focus();
                         updateLabel();
                     }
@@ -215,6 +230,27 @@ namespace BeerMaker
                 MessageBox.Show("Please enter all fermentable information.", "Error",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void resetAllButton_Click(object sender, EventArgs e)
+        {
+            hopsListView.Items.Clear();
+            fermentablesListView.Items.Clear();
+            resetFermentableAdditions();
+            resetHopAdditions();
+            fermentablesGroupBox.Visible = false;
+            hopGroupBox.Visible = false;
+            hopsListView.Visible = false;
+            fermentablesListView.Visible = false;
+            resetAllButton.Visible = false;
+            clearRecipeButton.Visible = false;
+            clearSelectedHopButton.Visible = false;
+            clearSelectedMaltButton.Visible = false;
+            recipeNameLabel.Text = string.Empty;
+            batchSizeTextBox.Text = string.Empty;
+            beerNameTextBox.Text = string.Empty;
+            beerStyleComboBox.SelectedIndex = -1;
+            beerNameTextBox.Focus();
         }
     }
 }
